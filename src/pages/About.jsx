@@ -39,7 +39,7 @@ const About = () => (
     {/* Sections Below */}
     <MissionSection />
     <FeatureHighlights />
-    {/* <TeamSection /> */}
+    <TeamSection />
     <CallToActionBanner />
   </div>
 );
