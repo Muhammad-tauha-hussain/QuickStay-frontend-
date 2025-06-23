@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { assets, cities } from '../assets/assets';
+import { useAppContext } from '../context/Appcontext';
+
 
 const HotelRegModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Show modal automatically after 1 second
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+ const {setShowHotelReg} = useAppContext()
 
   if (!isOpen) return null;
 
@@ -18,7 +16,7 @@ const HotelRegModal = () => {
         {/* Close Button */}
         <button
           className="absolute top-3 right-3 text-2xl font-bold text-gray-600 hover:text-red-600 z-50"
-          onClick={() => setIsOpen(false)}
+          onClick={() => setShowHotelReg(flase)}
         >
           &times;
         </button>

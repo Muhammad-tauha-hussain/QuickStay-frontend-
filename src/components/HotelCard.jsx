@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const HotelCard = ({ room }) => {
-  console.log(room);
+  // console.log(room);
   
   return (
     <Link
